@@ -1,0 +1,8 @@
+---
+# tasks file for repos
+
+- include: xenial.yml
+  when: ansible_distribution_release == "xenial"
+
+- include: all_os.yml
+  when: ansible_distribution_release != "xenial"
